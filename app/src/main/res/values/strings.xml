@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Juego</string>
+    <string name="nombre">Nombre de usuario</string>
+    <string name="jugar">Jugar</string>
+    <string name="txtHola">Hola</string>
+
+    <string name="txtGenerarNumero">Generar Numero</string>
+    <string name="txtPresiona">Presiona</string>
+    <string name="txtAcertast">Acertaste</string>
+
+    <string name="txtFallaste">Fallaste</string>
+    <string name="txtResultado">Resultado</string>
+
+</resources>
