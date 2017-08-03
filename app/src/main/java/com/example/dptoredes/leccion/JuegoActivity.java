@@ -1,6 +1,7 @@
 package com.example.dptoredes.leccion;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -100,6 +101,8 @@ public class JuegoActivity extends AppCompatActivity {
     }
     public void esCorrecto(int numero){
         turno +=1;
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.sonido);
+        mp.start();
         if(numero == numeroGenerado){
             Toast.makeText(JuegoActivity.this, ":)", Toast.LENGTH_LONG).show();
             aciertos+=1;
