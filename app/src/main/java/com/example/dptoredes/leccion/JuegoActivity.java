@@ -74,7 +74,7 @@ public class JuegoActivity extends AppCompatActivity {
 
                 numeroGenerado = generarNuevoNumero();
 
-                Toast.makeText(JuegoActivity.this, R.string.txtPresiona +" :"+numeroGenerado, Toast.LENGTH_SHORT).show();
+                Toast.makeText(JuegoActivity.this, "-> "+numeroGenerado +" <-", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -83,26 +83,28 @@ public class JuegoActivity extends AppCompatActivity {
 
     public int generarNuevoNumero(){
 
-        int numero;
-        numero = (int) (Math.random() * 5) + 1;
 
+        Random generadorAleatorios = new Random();
+        //int numero;
+        //numero = (int) (Math.random() * 5) + 1;
+        int numero = 1+generadorAleatorios.nextInt(5);
         if(numerosGenerados.contains(numero)){
             generarNuevoNumero();
         }
 
         numerosGenerados.add(numero);
 
-        return numerosGenerados.indexOf(numerosGenerados.size()-1);
+        return numero;
 
 
     }
     public void esCorrecto(int numero){
         turno +=1;
         if(numero == numeroGenerado){
-            Toast.makeText(JuegoActivity.this, R.string.txtAcertast, Toast.LENGTH_LONG).show();
+            Toast.makeText(JuegoActivity.this, ":)", Toast.LENGTH_LONG).show();
             aciertos+=1;
         }else{
-            Toast.makeText(JuegoActivity.this, R.string.txtFallaste, Toast.LENGTH_LONG).show();
+            Toast.makeText(JuegoActivity.this, ":(", Toast.LENGTH_LONG).show();
         }
 
 
@@ -110,6 +112,7 @@ public class JuegoActivity extends AppCompatActivity {
             Intent resultadoActivity = new Intent(this, ResultadoActivity.class);
             resultadoActivity.putExtra("usuario",(String)getIntent().getExtras().get("usuario") );
             resultadoActivity.putExtra("aciertos", ""+aciertos);
+            startActivity(resultadoActivity);
         }
 
 

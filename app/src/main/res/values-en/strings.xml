@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Game</string>
     <string name="nombre">Username</string>
     <string name="jugar">Play</string>
     <string name="txtHola">Hello</string>
-
     <string name="txtGenerarNumero">Generate Number</string>
     <string name="txtPresiona">Press</string>
     <string name="txtAcertast">Nice</string>
-
     <string name="txtFallaste">Try again</string>
-    <string name="txtResultado">Result</string>
+    <string name="txtResultados">Result</string>
 </resources>
